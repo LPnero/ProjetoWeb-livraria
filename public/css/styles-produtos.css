@@ -1,0 +1,104 @@
+/* ===== SEÇÃO: TIPOS DE LIVROS ===== */
+
+.sec-tipos-livros {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.titulo-geral-sec-livros {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.container-tipos-livros {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-tipo-livro {
+    width: 300px;
+}
+
+.livro-imagem {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.descricao-card-livro {
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ===== SEÇÃO: GIBIS ===== */
+
+.sec-gibis {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.titulo-geral-sec-gibis {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.container-gibis {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-gibi {
+    width: 300px;
+}
+
+.gibi-imagem {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.descricao-card-gibi {
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ===== SEÇÃO: LIVROS CLÁSSICOS ===== */
+
+.sec-classicos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.titulo-geral-sec-classicos {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.container-classicos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-classico {
+    width: 300px;
+}
+
+.classico-imagem {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.descricao-card-classico {
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}

@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>depoimentos</title>
+    <title>Depoimentos - Barros Livros e Revistas</title>
 
-     <!-- Link para fontes -->
+    <!-- Link para fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- Link Cabeçalho e Rodapé -->
-    <link rel="stylesheet" href="./css/header-footer.css">
+    <!-- Link Cabeçalho e Rodapé corrigido para header&footer.css -->
+    <link rel="stylesheet" href="css/header&footer.css">
 
     <!-- Link styles depoimentos -->
-     <link rel="stylesheet" href="./css/styles-depoimentos.css">
-
+    <link rel="stylesheet" href="css/styles-depoimentos.css">
 </head>
 <body>
 
     <!-- Cabeçalho -->
-
     <header>
-        <img class="logo-footer" src="img/Logo.png" alt="Logo do site">
+        <img class="logo-livraria" src="img/Logo.png" alt="Logo da livraria">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -35,72 +33,67 @@
     </header>
 
     <!-- Seção título depoimentos -->
-
     <section class="titulo-depoimentos">
         <h1 class="titulo-geral-depoimento">Depoimentos</h1>
     </section>
 
     <!-- Seção depoimentos -->
-
     <section class="depoimentos-sec">
         <div class="conteiner-dep" id="lista-depoimentos">
-             <!-- Os depoimentos virão dinamicamente pelo JS -->
+            <!-- Os depoimentos virão dinamicamente pelo JS -->
         </div>
     </section>
 
     <section class="vazia"></section>
 
     <!-- Rodapé -->
-
-     <footer>
-        <div class="container-geral-footer">
+    <footer>
+        <div class="conteiner-geral-footer">
             <div class="card-footer-logo">
-                <img src="img/Logo.png" alt="Logo livraria" class="logo-footer">
+                <img src="img/Logo.png" alt="Logo" class="logo-footer">
                 <p class="footer-logo-descricao">Descubra, leia, imagine.</p>
             </div>
             <div class="card-footer-textos">
                 <h3 class="titulo-footer">Onde Estamos</h3>
-                <p class="footer-descricao">End: Rua Coronel Antônio Solto - 146 <br> Garanhuns - PE </p>
+                <p class="footer-descricao">End: Rua Coronel Antônio Solto - 146 <br> Garanhuns - PE</p>
             </div>
             <div class="card-footer-textos">
                 <h3 class="titulo-footer">Contatos</h3>
                 <p class="footer-descricao">Tel.: (87) 9 8152-2225 <br> Instagram: @barroslivros</p>
             </div>
         </div>
-        <p class="footer-copyright">© 2026 Barros livros e revistas – Todos os direitos reservados.</p>
+        <p class="footer-copyright">© 2026 Barros Livros e revistas – Todos os direitos reservados.</p>
     </footer> 
 
     <script>
-    
         fetch("/depoimentos")
-        .then(function(resposta) {
-            return resposta.json();
-        })
-        .then(function(dados) {
-            const container = document.getElementById("lista-depoimentos");
+            .then(function(resposta) {
+                return resposta.json();
+            })
+            .then(function(dados) {
+                const container = document.getElementById("lista-depoimentos");
 
-            dados.forEach(function(dep) {
-                const card = document.createElement("div");
-                card.classList.add("card-dep");
+                dados.forEach(function(dep) {
+                    const card = document.createElement("div");
+                    card.classList.add("card-dep");
 
-                const bloco = document.createElement("blockquote");
-                bloco.classList.add("descricao-dep");
-                bloco.textContent = `"${dep.mensagem}"`;
+                    const bloco = document.createElement("blockquote");
+                    bloco.classList.add("descricao-dep");
+                    bloco.textContent = `"${dep.mensagem}"`;
 
-                const nome = document.createElement("p");
-                nome.classList.add("nome");
-                nome.textContent = `— ${dep.nome}`;
+                    const nome = document.createElement("p");
+                    nome.classList.add("nome");
+                    nome.textContent = `— ${dep.nome}`;
 
-                card.appendChild(bloco);
-                card.appendChild(nome);
-                container.appendChild(card);
+                    card.appendChild(bloco);
+                    card.appendChild(nome);
+                    container.appendChild(card);
+                });
+            })
+            .catch(function(err) {
+                console.error("Erro ao carregar depoimentos:", err);
             });
-        })
-        .catch(function(err) {
-            console.error("Erro ao carregar depoimentos:", err);
-    });
-</script>
+    </script>
 
-    
 </body>
 </html>

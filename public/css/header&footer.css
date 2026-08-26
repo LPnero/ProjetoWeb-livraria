@@ -39,26 +39,27 @@ nav ul li a:hover{
 
 /*Rodapé*/
 
+/*Rodapé*/
+
 footer{
-    height: 250px;
+    min-height: 250px; /* Usa min-height em vez de height fixo */
     background-color: #3B1F2B;
-    margin: 0 auto; /* Centraliza o rodapé na página */
+    margin: 0 auto;
     display: flex;
-    flex-direction: column; /*Coloca um abaixo do outro*/
-    align-items: center; /*Centraliza na horizontal todo conteúdo do rodapé*/
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    padding: 50px 0;
+    padding: 30px 20px; /* Reduz ligeiramente o padding superior/inferior */
     box-sizing: border-box;
 }
 
 .conteiner-geral-footer{
-    height: 150px;
-    width: 1360px;
+    width: 100%;
+    max-width: 1360px; /* Permite adaptar em telas menores */
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 40px;
     margin-top: 0;
-    
 }
 
 .logo-footer{
@@ -67,13 +68,11 @@ footer{
 }
 
 .card-footer-logo{
-    height: 150px;
     width: 400px;
     text-align: center;
 }
 
 .card-footer-textos{
-    height: 150px;
     width: 400px;
     align-items: center;
     text-align: center;
@@ -94,8 +93,8 @@ footer{
     font-family: "Poppins", Arial, sans-serif;
     font-size: 18px;
     font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 10px; /* Reduzido de 40px para 10px para alinhar com o topo */
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -105,6 +104,7 @@ footer{
     font-size: 14px;
     font-weight: 400;
     text-align: center;
+    margin: 0;
 }
 
 .footer-copyright{
@@ -112,5 +112,6 @@ footer{
     font-family: "Poppins", Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
+    margin-top: 20px;
 }
 

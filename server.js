@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Permite trabalhar com JSON
 app.use(express.json());
@@ -108,6 +108,11 @@ app.get("/api/livros", (req, res) => {
 
     res.json(livros);
 
+});
+
+// Servir a página inicial
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // Inicia o servidor

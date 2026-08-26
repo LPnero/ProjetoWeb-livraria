@@ -76,6 +76,7 @@
         .search-bar { border-bottom: 2px solid var(--wine); display: inline-flex; width: 350px; justify-content: space-between; padding: 5px; }
         
         .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px; }
+        .book-card-link { text-decoration: none; color: inherit; display: block; }
         .book-card { transition: transform 0.3s; cursor: pointer; }
         .book-card:hover { transform: translateY(-10px); }
         .book-card img { width: 100%; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
@@ -107,15 +108,15 @@
 
     <header>
         <div class="back-nav">
-            <a href="#" class="back-arrow"><i class="fas fa-arrow-left"></i></a>
+            <a href="index.html" class="back-arrow"><i class="fas fa-arrow-left"></i></a>
             <nav>
-                <a href="#">Home</a>
-                <a href="#">História</a>
-                <a href="#" style="color: var(--wine);">Catálogo</a>
-                <a href="#">Equipe</a>
+                <a href="index.html">Home</a>
+                <a href="quem-somos.html">História</a>
+                <a href="produtos.html" style="color: var(--wine);">Catálogo</a>
+                <a href="contatos.html">Equipe</a>
             </nav>
         </div>
-        <a href="#" class="area-livreiro">
+        <a href="contatos.html" class="area-livreiro">
             <i class="far fa-user"></i> ÁREA DO LIVREIRO
         </a>
     </header>
@@ -166,24 +167,34 @@
         </div>
         
         <div class="book-grid container">
-            <div class="book-card">
-                <img src="img/A política da prudência - Página 3.png" alt="A Política da Prudência">
-                <p>A Política da Prudência</p>
-            </div>
-            <div class="book-card">
-                <img src="img/marxismo e descendência - Página 3.png" alt="Marxismo">
-                <p>Marxismo e descendência</p>
-            </div>
-            <div class="book-card">
-                <img src="img/A ideologia do século XX - Página 3.png" alt="Ideologia">
-                <p>A ideologia do século XX</p>
-            </div>
-            <div class="book-card">
-                <img src="img/A arte da Guerra - Página 3.png" alt="Arte da Guerra">
-                <p>Arte da Guerra</p>
-            </div>
+            <a href="produtos.html" class="book-card-link">
+                <div class="book-card">
+                    <img src="img/A política da prudência - Página 3.png" alt="A Política da Prudência">
+                    <p>A Política da Prudência</p>
+                </div>
+            </a>
+            <a href="produtos.html" class="book-card-link">
+                <div class="book-card">
+                    <img src="img/marxismo e descendência - Página 3.png" alt="Marxismo">
+                    <p>Marxismo e descendência</p>
+                </div>
+            </a>
+            <a href="produtos.html" class="book-card-link">
+                <div class="book-card">
+                    <img src="img/A ideologia do século XX - Página 3.png" alt="Ideologia">
+                    <p>A ideologia do século XX</p>
+                </div>
+            </a>
+            <a href="produtos.html" class="book-card-link">
+                <div class="book-card">
+                    <img src="img/A arte da Guerra - Página 3.png" alt="Arte da Guerra">
+                    <p>Arte da Guerra</p>
+                </div>
+            </a>
         </div>
-        <button class="btn-more">Ver Mais</button>
+        <a href="produtos.html">
+            <button class="btn-more">Ver Mais</button>
+        </a>
     </section>
 
     <!-- 4. Página de Detalhes do Produto -->
@@ -202,7 +213,9 @@
             <h2>ARTE DA GUERRA</h2>
             <p style="color: #888; margin-top: -10px;">Sun Tzu</p>
             <p>"A Arte da Guerra", de Sun Tzu, é um tratado clássico sobre estratégia, defendendo que a melhor vitória é vencer sem lutar, focando em inteligência, preparação e rapidez. A obra ensina a conhecer a si mesmo e ao inimigo, adaptar-se ao terreno e usar o engano para superar adversários.</p>
-            <button class="btn-reserve">Reservar</button>
+            <a href="contatos.html">
+                <button class="btn-reserve">Reservar</button>
+            </a>
         </div>
     </section>
 
@@ -213,9 +226,9 @@
             <span>© Todos os direitos reservados</span>
         </div>
         <div class="socials">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
         </div>
     </footer>
 
